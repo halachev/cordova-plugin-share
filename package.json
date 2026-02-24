@@ -1,0 +1,20 @@
+{
+  "name": "cordova-plugin-share",
+  "version": "1.0.0",
+  "description": "Cordova plugin for iOS Share Sheet",
+  "cordova": {
+    "id": "com.softmex.share",
+    "platforms": [
+      "ios"
+    ]
+  },
+  "keywords": [
+    "cordova",
+    "plugin",
+    "share",
+    "ios"
+  ],
+  "author": "softmex",
+  "license": "MIT",
+  "dependencies": {}
+}
