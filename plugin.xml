@@ -1,14 +1,27 @@
-<plugin id="com.softmex.share" version="1.0.0"
-        xmlns="http://apache.org/cordova/ns/plugins"
-        xmlns:android="http://schemas.android.com/apk/res/android">
-    <name>SharePlugin</name>
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        id="com.softmex.share"
+        version="1.0.0">
 
+    <name>SharePlugin</name>
+    <description>Cordova plugin for iOS Share Sheet</description>
+
+    <!-- JavaScript interface -->
     <js-module src="www/share.js" name="SharePlugin">
         <clobbers target="cordova.plugins.sharePlugin" />
     </js-module>
 
+    <!-- iOS platform -->
     <platform name="ios">
         <source-file src="src/ios/SharePlugin.m" />
         <header-file src="src/ios/SharePlugin.h" />
+
+        <!-- Feature registration за config.xml -->
+        <config-file target="config.xml" parent="/*">
+            <feature name="SharePlugin">
+                <param name="ios-package" value="SharePlugin"/>
+            </feature>
+        </config-file>
     </platform>
+
 </plugin>
